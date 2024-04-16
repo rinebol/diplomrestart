@@ -1,4 +1,5 @@
-﻿using System;
+﻿using diplomrestart.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,6 +46,11 @@ namespace diplomrestart
         private void btnHome_Click(object sender, EventArgs e)
         {
             AddControls(new frmHome());
+        }
+
+        private void btnCategories_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmCategoryView());
         }
     }
 }

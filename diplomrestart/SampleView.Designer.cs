@@ -90,6 +90,7 @@
             // SampleView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(933, 588);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAdd);
