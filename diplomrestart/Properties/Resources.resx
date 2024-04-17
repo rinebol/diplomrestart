@@ -118,10 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="free-icon-warehouse-2264885" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-warehouse-22648851.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-warehouse-22648851" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-warehouse-2264885.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Без имени" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Без имени.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kandinsky-download-1709395623632" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kandinsky-download-1709395623632.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-warehouse-22648852" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-warehouse-22648852.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

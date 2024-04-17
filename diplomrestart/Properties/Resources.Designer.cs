@@ -63,6 +63,36 @@ namespace diplomrestart.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap free_icon_warehouse_2264885 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-warehouse-2264885", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap free_icon_warehouse_22648851 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-warehouse-22648851", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap free_icon_warehouse_22648852 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-warehouse-22648852", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kandinsky_download_1709395623632 {
             get {
                 object obj = ResourceManager.GetObject("kandinsky-download-1709395623632", resourceCulture);
