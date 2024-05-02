@@ -8,32 +8,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace diplomrestart.Model
 {
-    public partial class frmCategoryAdd : SampleAdd
+    public partial class frmProviderAdd : SampleAdd
     {
-        public frmCategoryAdd()
+        public frmProviderAdd()
         {
             InitializeComponent();
         }
         public int id = 0;
-
         public override void btnSave_Click(object sender, EventArgs e)
         {
             string qry = "";
             if (id == 0)
             {
-                qry = "Insert into category Values(@Name)";
+                qry = "Insert into provider Values(@Name,@Adress)";
 
             }
             else
             {
-                qry = "Update category Set catName = @Name where catID = @id ";
+                qry = "Update provider Set tname = @Name where tid = @id ";
             }
             Hashtable ht = new Hashtable();
             ht.Add("@id", id);
-            ht.Add ("@Name", txtName.Text);
+            ht.Add("@Name", txtName.Text);
+            ht.Add("@Adress", txtAdress.Text);
 
             if (MainClass.SQL(qry, ht) > 0)
             {

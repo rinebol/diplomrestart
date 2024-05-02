@@ -63,6 +63,16 @@ namespace diplomrestart.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap edit_3488485 {
+            get {
+                object obj = ResourceManager.GetObject("edit_3488485", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap free_icon_warehouse_2264885 {
             get {
                 object obj = ResourceManager.GetObject("free-icon-warehouse-2264885", resourceCulture);
@@ -93,9 +103,29 @@ namespace diplomrestart.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_account_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-account-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kandinsky_download_1709395623632 {
             get {
                 object obj = ResourceManager.GetObject("kandinsky-download-1709395623632", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trash_12683363 {
+            get {
+                object obj = ResourceManager.GetObject("trash_12683363", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

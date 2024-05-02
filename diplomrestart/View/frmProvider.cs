@@ -12,28 +12,30 @@ using System.Windows.Forms;
 
 namespace diplomrestart.View
 {
-    public partial class frmCategoryView : SampleView
+    public partial class frmProvider : SampleView
     {
-        public frmCategoryView()
+        public frmProvider()
         {
             InitializeComponent();
         }
-        public void GetData()
-        {
-            string qry = "Select * From category where catName like '%"+ txtSearch.Text+"%' ";
-            ListBox lb = new ListBox();
-            lb.Items.Add(dgvid);
-            lb.Items.Add(dgvName);
-            MainClass.LoadData(qry, guna2DataGridView1, lb);
-        }
+     
 
-        private void frmCategoryView_Load(object sender, EventArgs e)
+        private void frmProvider_Load(object sender, EventArgs e)
         {
             GetData();
         }
+        public void GetData()
+        {
+            string qry = "Select * From provider where tname like '%" + txtSearch.Text + "%' ";
+            ListBox lb = new ListBox();
+            lb.Items.Add(dgvid);
+            lb.Items.Add(dgvName);
+            lb.Items.Add(dgvAdress);
+            MainClass.LoadData(qry, guna2DataGridView1, lb);
+        }
         public override void btnAdd_Click(object sender, EventArgs e)
         {
-            frmCategoryAdd frm = new frmCategoryAdd();
+            frmProviderAdd frm = new frmProviderAdd();
             frm.ShowDialog();
             GetData();
         }
@@ -43,20 +45,21 @@ namespace diplomrestart.View
             GetData();
         }
 
-      
+
 
         private void guna2DataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "dgvedit")
             {
-                
-                   
-                    frmCategoryAdd frm = new frmCategoryAdd();
-                    frm.id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
-                    frm.txtName.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvName"].Value);
-                    frm.ShowDialog();
-                    GetData();
-                
+
+
+                frmProviderAdd frm = new frmProviderAdd();
+                frm.id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
+                frm.txtName.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvName"].Value);
+                frm.txtAdress.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvAdress"].Value);
+                frm.ShowDialog();
+                GetData();
+
             }
 
 
@@ -68,7 +71,7 @@ namespace diplomrestart.View
                 {
 
                     int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
-                    string qry = "Delete from category where catID= " + id + "";
+                    string qry = "Delete from provider where tid= " + id + "";
                     Hashtable ht = new Hashtable();
                     MainClass.SQL(qry, ht);
 
@@ -81,5 +84,4 @@ namespace diplomrestart.View
             }
         }
     }
-
 }
