@@ -102,5 +102,31 @@ namespace diplomrestart
                 row.Cells[0].Value = count;
             }
         }
+        public static void CBFill(string qry, ComboBox cb)
+        {
+            SqlCommand cmd = new SqlCommand (qry, con);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);  
+            DataTable dt = new DataTable(); 
+            da.Fill(dt);
+
+            cb.DisplayMember = "name";
+            cb.ValueMember = "id";
+            cb.DataSource = dt;
+            cb.SelectedIndex = -1;
+        }
+        public static void fillCombo(ComboBox combo, string qry, string displayMember, string valueMember) 
+        {
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            combo.DataSource = dt;
+            combo.DisplayMember = displayMember;
+            combo.ValueMember = valueMember;    
+
+
+        }
     }
 }

@@ -78,6 +78,12 @@
     <Compile Include="Model\frmCategoryAdd.Designer.cs">
       <DependentUpon>frmCategoryAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\frmProductAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmProductAdd.Designer.cs">
+      <DependentUpon>frmProductAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\frmProviderAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,24 @@
     <Compile Include="View\frmCategoryView.Designer.cs">
       <DependentUpon>frmCategoryView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmOrder.Designer.cs">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmOrder2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmOrder2.Designer.cs">
+      <DependentUpon>frmOrder2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmProvider.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +151,9 @@
     <EmbeddedResource Include="Model\frmCategoryAdd.resx">
       <DependentUpon>frmCategoryAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmProductAdd.resx">
+      <DependentUpon>frmProductAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model\frmProviderAdd.resx">
       <DependentUpon>frmProviderAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +170,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmCategoryView.resx">
       <DependentUpon>frmCategoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmOrder2.resx">
+      <DependentUpon>frmOrder2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmProvider.resx">
       <DependentUpon>frmProvider.cs</DependentUpon>

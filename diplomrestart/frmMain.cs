@@ -1,5 +1,6 @@
 ﻿using diplomrestart.Model;
 using diplomrestart.View;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,6 +58,23 @@ namespace diplomrestart
         private void btnProvider_Click(object sender, EventArgs e)
         {
             AddControls(new frmProvider());
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmProduct());
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmOrder2());
+        }
+
+        private void guna2ControlBox3_Click(object sender, EventArgs e)
+        {
+            
+           
+            
         }
     }
 }

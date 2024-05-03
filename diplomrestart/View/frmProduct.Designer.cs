@@ -1,6 +1,6 @@
 ﻿namespace diplomrestart.View
 {
-    partial class frmProvider
+    partial class frmProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -35,19 +35,18 @@
             this.dgvSno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvAdress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvProvider = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvProviderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvedit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvdel = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(15, -4);
-            this.label2.Size = new System.Drawing.Size(182, 40);
-            this.label2.Text = "Поставщики";
+            this.label2.Size = new System.Drawing.Size(117, 40);
+            this.label2.Text = "Товары";
             // 
             // guna2DataGridView1
             // 
@@ -71,7 +70,9 @@
             this.dgvSno,
             this.dgvid,
             this.dgvName,
-            this.dgvAdress,
+            this.dgvProvider,
+            this.dgvProviderID,
+            this.dgvCost,
             this.dgvedit,
             this.dgvdel});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -86,8 +87,8 @@
             this.guna2DataGridView1.Location = new System.Drawing.Point(42, 65);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(869, 407);
-            this.guna2DataGridView1.TabIndex = 6;
+            this.guna2DataGridView1.Size = new System.Drawing.Size(868, 407);
+            this.guna2DataGridView1.TabIndex = 7;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -128,13 +129,24 @@
             // 
             // dgvName
             // 
-            this.dgvName.HeaderText = "Название организации";
+            this.dgvName.HeaderText = "Продукт";
             this.dgvName.Name = "dgvName";
             // 
-            // dgvAdress
+            // dgvProvider
             // 
-            this.dgvAdress.HeaderText = "Адрес";
-            this.dgvAdress.Name = "dgvAdress";
+            this.dgvProvider.HeaderText = "Поставщик";
+            this.dgvProvider.Name = "dgvProvider";
+            // 
+            // dgvProviderID
+            // 
+            this.dgvProviderID.HeaderText = "pID";
+            this.dgvProviderID.Name = "dgvProviderID";
+            this.dgvProviderID.Visible = false;
+            // 
+            // dgvCost
+            // 
+            this.dgvCost.HeaderText = "Цена за 1 шт.";
+            this.dgvCost.Name = "dgvCost";
             // 
             // dgvedit
             // 
@@ -158,37 +170,15 @@
             this.dgvdel.Name = "dgvdel";
             this.dgvdel.Width = 50;
             // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn1.FillWeight = 50F;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::diplomrestart.Properties.Resources.edit_3488485;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.MinimumWidth = 50;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 50;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn2.FillWeight = 50F;
-            this.dataGridViewImageColumn2.HeaderText = "";
-            this.dataGridViewImageColumn2.Image = global::diplomrestart.Properties.Resources.trash_12683363;
-            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn2.MinimumWidth = 50;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Width = 50;
-            // 
-            // frmProvider
+            // frmProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(977, 638);
+            this.ClientSize = new System.Drawing.Size(976, 634);
             this.Controls.Add(this.guna2DataGridView1);
-            this.Name = "frmProvider";
-            this.Text = "frmProvider";
-            this.Load += new System.EventHandler(this.frmProvider_Load);
+            this.Name = "frmProduct";
+            this.Text = "frmProduct";
+            this.Load += new System.EventHandler(this.frmProduct_Load);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.guna2DataGridView1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
@@ -200,12 +190,12 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSno;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvAdress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProvider;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProviderID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCost;
         private System.Windows.Forms.DataGridViewImageColumn dgvedit;
         private System.Windows.Forms.DataGridViewImageColumn dgvdel;
     }
