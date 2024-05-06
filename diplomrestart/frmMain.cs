@@ -67,7 +67,7 @@ namespace diplomrestart
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            AddControls(new frmOrder2());
+            AddControls(new frmStatusOrder());
         }
 
         private void guna2ControlBox3_Click(object sender, EventArgs e)
@@ -75,6 +75,11 @@ namespace diplomrestart
             
            
             
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmOrder2());
         }
     }
 }

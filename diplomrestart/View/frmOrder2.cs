@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using diplomrestart.OrderView;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,7 +26,7 @@ namespace diplomrestart.View
         {
             string value = cdNameP.Text;
 
-            guna2TextBox1.Text = cdNameP.Text;
+         
 
             string qry2 = "select pid 'id',pname 'name',c.tname  from Product p inner join provider c on c.tid = p.pprovider where c.tname like '" + value + "'";
             MainClass.CBFill(qry2, cbProduct);
@@ -74,18 +75,22 @@ namespace diplomrestart.View
             string qry = "";
             if (id == 0)
             {
-                qry = "Insert into Product Values(@Name,@Provider,@Cost)";
+                qry = "Insert into OrderP Values(@Name,@Provider,@Count)";
 
             }
             else
             {
-                qry = "Update Product Set pname = @Name, pprovider = @Provider pcost = @Cost where pid = @id ";
+                qry = "Update OrderP Set oname = @Name, oprovider = @Provider, ocount = @Count where oid = @id ";
             }
             Hashtable ht = new Hashtable();
+            //string active = "active";
+            //string date = "2008 - 11 - 11 13:23:44";
             ht.Add("@id", id);
-            //ht.Add("@Name", txtName.Text);
-            //ht.Add("@Provider", Convert.ToInt32(cbProvider.SelectedValue));
-            //ht.Add("@Cost", txtCost.Text);
+            ht.Add("@Name", Convert.ToInt32(cdNameP.SelectedValue));
+            ht.Add("@Provider", Convert.ToInt32(cbProduct.SelectedValue));
+            ht.Add("@Count", txtCount.Text);
+            //ht.Add("@Active", active);
+            //ht.Add("@Date", date);
 
 
             if (MainClass.SQL(qry, ht) > 0)
@@ -109,7 +114,17 @@ namespace diplomrestart.View
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            AddControls(new frmProvider());
+            AddControls(new OrderViewProduct());
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            AddControls(new OrderViewProvider());
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            AddControls(new OrderViewCategoris());
         }
     }
 }
