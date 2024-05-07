@@ -188,8 +188,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSno;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvName;
@@ -198,5 +196,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCost;
         private System.Windows.Forms.DataGridViewImageColumn dgvedit;
         private System.Windows.Forms.DataGridViewImageColumn dgvdel;
+        public Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
     }
 }

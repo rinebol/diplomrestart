@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cdNameP = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.diplomDataSet = new diplomrestart.diplomDataSet();
             this.cbProduct = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtCount = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnCreate = new Guna.UI2.WinForms.Guna2Button();
@@ -37,13 +40,24 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.ViewPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.productTableAdapter = new diplomrestart.diplomDataSetTableAdapters.ProductTableAdapter();
+            this.cbCost = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.frmOrder2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.frmProductBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.frmProductBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diplomDataSet)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.frmOrder2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frmProductBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frmProductBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // cdNameP
@@ -64,6 +78,16 @@
             this.cdNameP.TabIndex = 7;
             this.cdNameP.SelectedIndexChanged += new System.EventHandler(this.cdNameP_SelectedIndexChanged);
             // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataMember = "Product";
+            this.productBindingSource.DataSource = this.diplomDataSet;
+            // 
+            // diplomDataSet
+            // 
+            this.diplomDataSet.DataSetName = "diplomDataSet";
+            this.diplomDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cbProduct
             // 
             this.cbProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
@@ -76,17 +100,6 @@
             this.cbProduct.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbProduct.ItemHeight = 30;
-            this.cbProduct.Items.AddRange(new object[] {
-            "sadasdas",
-            "vdfgweg",
-            "fwefdfs",
-            "ewfwef",
-            "fefwefew",
-            "ewfewf",
-            "ewfwefw",
-            "wefwef",
-            "ewfwefsd",
-            "wefweef"});
             this.cbProduct.Location = new System.Drawing.Point(21, 167);
             this.cbProduct.Name = "cbProduct";
             this.cbProduct.Size = new System.Drawing.Size(343, 36);
@@ -210,6 +223,8 @@
             this.guna2Panel2.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel2.BorderRadius = 30;
             this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.cbCost);
+            this.guna2Panel2.Controls.Add(this.label5);
             this.guna2Panel2.Controls.Add(this.label4);
             this.guna2Panel2.Controls.Add(this.label3);
             this.guna2Panel2.Controls.Add(this.label2);
@@ -223,6 +238,26 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(385, 535);
             this.guna2Panel2.TabIndex = 21;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(172, 206);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(85, 16);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Количество";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(14, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(189, 40);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Заказ товара";
             // 
             // label3
             // 
@@ -273,15 +308,36 @@
             this.guna2Panel3.Size = new System.Drawing.Size(904, 572);
             this.guna2Panel3.TabIndex = 22;
             // 
-            // label4
+            // productTableAdapter
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(14, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(189, 40);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Заказ товара";
+            this.productTableAdapter.ClearBeforeFill = true;
+            // 
+            // cbCost
+            // 
+            this.cbCost.BackColor = System.Drawing.Color.Transparent;
+            this.cbCost.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbCost.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCost.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbCost.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbCost.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbCost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbCost.ItemHeight = 30;
+            this.cbCost.Location = new System.Drawing.Point(187, 225);
+            this.cbCost.Name = "cbCost";
+            this.cbCost.Size = new System.Drawing.Size(140, 36);
+            this.cbCost.TabIndex = 21;
+            // 
+            // frmOrder2BindingSource
+            // 
+            this.frmOrder2BindingSource.DataSource = typeof(diplomrestart.View.frmOrder2);
+            // 
+            // frmProductBindingSource
+            // 
+            this.frmProductBindingSource.DataSource = typeof(diplomrestart.View.frmProduct);
+            // 
+            // frmProductBindingSource1
+            // 
+            this.frmProductBindingSource1.DataSource = typeof(diplomrestart.View.frmProduct);
             // 
             // frmOrder2
             // 
@@ -294,9 +350,14 @@
             this.Name = "frmOrder2";
             this.Text = "frmOrder2";
             this.Load += new System.EventHandler(this.frmOrder2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diplomDataSet)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.frmOrder2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frmProductBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frmProductBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -317,5 +378,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.BindingSource frmOrder2BindingSource;
+        private System.Windows.Forms.BindingSource frmProductBindingSource;
+        private System.Windows.Forms.BindingSource frmProductBindingSource1;
+        private diplomDataSet diplomDataSet;
+        private System.Windows.Forms.BindingSource productBindingSource;
+        private diplomDataSetTableAdapters.ProductTableAdapter productTableAdapter;
+        private Guna.UI2.WinForms.Guna2ComboBox cbCost;
     }
 }

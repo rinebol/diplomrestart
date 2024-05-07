@@ -31,6 +31,8 @@
             this.CenterPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.btnProvider = new Guna.UI2.WinForms.Guna2Button();
             this.btnOrder = new Guna.UI2.WinForms.Guna2Button();
@@ -45,8 +47,6 @@
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.CenterPanel.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -99,6 +99,30 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1355, 113);
             this.guna2Panel2.TabIndex = 1;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CirclePictureBox1.Image = global::diplomrestart.Properties.Resources.icons8_account_50;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1047, 3);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(45, 44);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 12;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::diplomrestart.Properties.Resources.free_icon_warehouse_22648852;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 8);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(97, 95);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // guna2Button4
             // 
@@ -193,7 +217,7 @@
             // 
             // lblUser
             // 
-            this.lblUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblUser.ForeColor = System.Drawing.Color.White;
@@ -338,30 +362,6 @@
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1355, 0);
             this.guna2Panel3.TabIndex = 2;
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2CirclePictureBox1.Image = global::diplomrestart.Properties.Resources.icons8_account_50;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1047, 3);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(45, 44);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 12;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::diplomrestart.Properties.Resources.free_icon_warehouse_22648852;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 8);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(97, 95);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // frmMain
             // 

@@ -115,6 +115,19 @@ namespace diplomrestart
             cb.DataSource = dt;
             cb.SelectedIndex = -1;
         }
+        public static void CBFill2(string qry, ComboBox cb)
+        {
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            cb.DisplayMember = "name";
+            cb.ValueMember = "id";
+            cb.DataSource = dt;
+            
+        }
         public static void fillCombo(ComboBox combo, string qry, string displayMember, string valueMember) 
         {
             SqlCommand cmd = new SqlCommand(qry, con);

@@ -33,14 +33,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>..\..\diplom4\diplom4\bin\Debug\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,6 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="diplomDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>diplomDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +232,20 @@
     <EmbeddedResource Include="View\frmStatusOrder.resx">
       <DependentUpon>frmStatusOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="diplomDataSet.xsc">
+      <DependentUpon>diplomDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="diplomDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>diplomDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="diplomDataSet.xss">
+      <DependentUpon>diplomDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\diplomrestart.View.frmOrder2.datasource" />
+    <None Include="Properties\DataSources\diplomrestart.View.frmProduct.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -243,6 +270,9 @@
     <Content Include="Resources\trash_12683363.png" />
     <None Include="Resources\free-icon-warehouse-22648852.png" />
     <Content Include="Resources\kandinsky-download-1709395623632 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,17 +33,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.dgvSno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvProvider = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvedit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dgvdel = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgvCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvActive = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +77,40 @@
             this.guna2Panel1.Size = new System.Drawing.Size(904, 572);
             this.guna2Panel1.TabIndex = 7;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.BorderThickness = 2;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Location = new System.Drawing.Point(78, 513);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderText = "";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(740, 36);
+            this.txtSearch.TabIndex = 9;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(75, 497);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Поиск";
+            // 
             // guna2DataGridView1
             // 
             this.guna2DataGridView1.AllowUserToAddRows = false;
@@ -100,8 +135,9 @@
             this.dgvName,
             this.dgvProvider,
             this.dgvCount,
-            this.dgvedit,
-            this.dgvdel});
+            this.dgvCost,
+            this.dgvActive,
+            this.dgvDate});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -137,40 +173,7 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.BorderThickness = 2;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(78, 513);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderText = "";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(740, 36);
-            this.txtSearch.TabIndex = 9;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(75, 497);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Поиск";
+            this.guna2DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellClick_1);
             // 
             // guna2MessageDialog1
             // 
@@ -211,27 +214,20 @@
             this.dgvCount.HeaderText = "Количество ";
             this.dgvCount.Name = "dgvCount";
             // 
-            // dgvedit
+            // dgvCost
             // 
-            this.dgvedit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvedit.FillWeight = 50F;
-            this.dgvedit.HeaderText = "";
-            this.dgvedit.Image = global::diplomrestart.Properties.Resources.edit_3488485;
-            this.dgvedit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dgvedit.MinimumWidth = 50;
-            this.dgvedit.Name = "dgvedit";
-            this.dgvedit.Width = 50;
+            this.dgvCost.HeaderText = "Цена за 1 товар";
+            this.dgvCost.Name = "dgvCost";
             // 
-            // dgvdel
+            // dgvActive
             // 
-            this.dgvdel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvdel.FillWeight = 50F;
-            this.dgvdel.HeaderText = "";
-            this.dgvdel.Image = global::diplomrestart.Properties.Resources.trash_12683363;
-            this.dgvdel.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dgvdel.MinimumWidth = 50;
-            this.dgvdel.Name = "dgvdel";
-            this.dgvdel.Width = 50;
+            this.dgvActive.HeaderText = "Состояние";
+            this.dgvActive.Name = "dgvActive";
+            // 
+            // dgvDate
+            // 
+            this.dgvDate.HeaderText = "Дата создания";
+            this.dgvDate.Name = "dgvDate";
             // 
             // frmStatusOrder
             // 
@@ -266,7 +262,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvProvider;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCount;
-        private System.Windows.Forms.DataGridViewImageColumn dgvedit;
-        private System.Windows.Forms.DataGridViewImageColumn dgvdel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvActive;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvDate;
     }
 }

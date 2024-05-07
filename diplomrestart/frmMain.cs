@@ -72,9 +72,9 @@ namespace diplomrestart
 
         private void guna2ControlBox3_Click(object sender, EventArgs e)
         {
-            
            
-            
+
+
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
