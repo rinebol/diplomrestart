@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>free-icon-warehouse-2264885-—-копия.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -103,6 +106,24 @@
     <Compile Include="Model\frmProviderAdd.Designer.cs">
       <DependentUpon>frmProviderAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\frmStatusOrderAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmStatusOrderAdd.Designer.cs">
+      <DependentUpon>frmStatusOrderAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\userAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\userAdd.Designer.cs">
+      <DependentUpon>userAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View2\user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View2\user.Designer.cs">
+      <DependentUpon>user.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderView\OrderViewCategoris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +160,24 @@
     </Compile>
     <Compile Include="SampleView.Designer.cs">
       <DependentUpon>SampleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View2\frmCategoryView2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View2\frmCategoryView2.Designer.cs">
+      <DependentUpon>frmCategoryView2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View2\frmProduct2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View2\frmProduct2.Designer.cs">
+      <DependentUpon>frmProduct2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View2\frmProvider2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View2\frmProvider2.Designer.cs">
+      <DependentUpon>frmProvider2.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmCategoryView.cs">
       <SubType>Form</SubType>
@@ -194,6 +233,12 @@
     <EmbeddedResource Include="Model\frmProviderAdd.resx">
       <DependentUpon>frmProviderAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmStatusOrderAdd.resx">
+      <DependentUpon>frmStatusOrderAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\userAdd.resx">
+      <DependentUpon>userAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrderView\OrderViewCategoris.resx">
       <DependentUpon>OrderViewCategoris.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +258,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SampleView.resx">
       <DependentUpon>SampleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View2\frmCategoryView2.resx">
+      <DependentUpon>frmCategoryView2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View2\frmProduct2.resx">
+      <DependentUpon>frmProduct2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View2\frmProvider2.resx">
+      <DependentUpon>frmProvider2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View2\user.resx">
+      <DependentUpon>user.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmCategoryView.resx">
       <DependentUpon>frmCategoryView.cs</DependentUpon>
@@ -263,10 +320,33 @@
     <None Include="Resources\kandinsky-download-1709395623632.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="free-icon-warehouse-2264885-—-копия.ico" />
     <Content Include="Resources\edit_3488485.png" />
+    <None Include="Resources\Снимок экрана 2024-05-16 0028161.png" />
+    <None Include="Resources\Снимок экрана 2024-05-16 002816.png" />
+    <None Include="Resources\free-icon-fast-delivery-3757891.png" />
+    <None Include="Resources\free-icon-package-3814709.png" />
+    <None Include="Resources\free-icon-address-12863494.png" />
+    <None Include="Resources\free-icon-password-4438711.png" />
+    <None Include="Resources\free-icon-personal-profile-4862713.png" />
+    <None Include="Resources\free-icon-mobile-app-5521112.png" />
+    <None Include="Resources\free-icon-mobile-app-55211121.png" />
+    <None Include="Resources\free-icon-lock-8472244.png" />
+    <None Include="Resources\free-icon-avatar-6387915.png" />
+    <None Include="Resources\free-icon-padlock-2575570.png" />
+    <None Include="Resources\free-icon-avatar-6386976.png" />
+    <None Include="Resources\free-icon-avatar-63869761.png" />
+    <None Include="Resources\free-icon-padlock-25755701.png" />
+    <None Include="Resources\free-icon-avatar-63879151.png" />
+    <None Include="Resources\free-icon-lock-84722441.png" />
+    <Content Include="Resources\free-icon-shopping-bag-1864930.png" />
+    <None Include="Resources\free-icon-shopping-bag-18649301.png" />
+    <None Include="Resources\free-icon-shopping-bag-1864981.png" />
     <Content Include="Resources\free-icon-warehouse-2264885.png" />
     <Content Include="Resources\free-icon-warehouse-22648851.png" />
     <Content Include="Resources\icons8-account-50.png" />
+    <None Include="Resources\price-tag.png" />
+    <None Include="Resources\profile.png" />
     <Content Include="Resources\trash_12683363.png" />
     <None Include="Resources\free-icon-warehouse-22648852.png" />
     <Content Include="Resources\kandinsky-download-1709395623632 %281%29.png" />

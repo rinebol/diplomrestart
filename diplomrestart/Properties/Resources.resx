@@ -118,28 +118,91 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="free-icon-warehouse-22648851" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\free-icon-warehouse-2264885.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="free-icon-shopping-bag-1864981" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-shopping-bag-1864981.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-package-3814709" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-package-3814709.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit_3488485" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit_3488485.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="trash_12683363" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trash_12683363.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="free-icon-fast-delivery-3757891" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-fast-delivery-3757891.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Без имени" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Без имени.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="free-icon-warehouse-2264885" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\free-icon-warehouse-22648851.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="price-tag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\price-tag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kandinsky-download-1709395623632" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kandinsky-download-1709395623632.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="free-icon-warehouse-22648852" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\free-icon-warehouse-22648852.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="trash_12683363" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trash_12683363.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-mobile-app-55211121" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-mobile-app-55211121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-account-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-account-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-address-12863494" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-address-12863494.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-warehouse-2264885" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-warehouse-22648851.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-shopping-bag-1864930" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-shopping-bag-18649301.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Без имени" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Без имени.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-mobile-app-5521112" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-mobile-app-5521112.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-avatar-6386976" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-avatar-6386976.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-lock-8472244" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-lock-8472244.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-warehouse-22648852" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-warehouse-22648852.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-avatar-6387915" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-avatar-6387915.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-password-4438711" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-password-4438711.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-warehouse-22648851" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-warehouse-2264885.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-personal-profile-4862713" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-personal-profile-4862713.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-padlock-2575570" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-padlock-2575570.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Снимок экрана 2024-05-16 002816" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Снимок экрана 2024-05-16 002816.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-avatar-63869761" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-avatar-63869761.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-padlock-25755701" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-padlock-25755701.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-avatar-63879151" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-avatar-63879151.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-lock-84722441" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-lock-84722441.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Снимок экрана 2024-05-16 0028161" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Снимок экрана 2024-05-16 0028161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

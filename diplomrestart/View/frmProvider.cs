@@ -67,8 +67,8 @@ namespace diplomrestart.View
             {
                 guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
                 guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
-                if (guna2MessageDialog1.Show("Вы уверены что хотите удалить данные?") == DialogResult.Yes)
-                {
+               
+                
 
                     int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
                     string qry = "Delete from provider where tid= " + id + "";
@@ -80,7 +80,7 @@ namespace diplomrestart.View
                     guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
                     guna2MessageDialog1.Show("Удаление выполнено");
                     GetData();
-                }
+                
             }
         }
     }

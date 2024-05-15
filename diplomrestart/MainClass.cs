@@ -18,7 +18,7 @@ namespace diplomrestart
         public static readonly string con_string = @"Data Source=DESKTOP-TE1RSA1\SQLEXPRESS;Initial Catalog=diplom;Integrated Security=True";
         public static SqlConnection con = new SqlConnection(con_string);
 
-
+                    
         public static bool IsValidUser(string user, string pass)
         {
 
@@ -32,6 +32,7 @@ namespace diplomrestart
             {
                 isValid = true;
                 USER = dt.Rows[0]["username"].ToString();
+                
             }
             return isValid;
 
@@ -44,6 +45,9 @@ namespace diplomrestart
             get { return user; }
             private set { user = value; }
         }
+        public static string phone;
+
+       
 
         public static int SQL(string qry, Hashtable ht)
         {

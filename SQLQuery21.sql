@@ -4,7 +4,7 @@ oid int primary key identity,
 oname varchar(50),
 oprovider varchar(50),
 ocount int,
-oactive varchar(50),
+osklad varchar(50),
 odate varchar(50),
 ocost varchar(50)
 )

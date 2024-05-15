@@ -21,27 +21,40 @@ namespace diplomrestart.Model
 
         public override void btnSave_Click(object sender, EventArgs e)
         {
-            string qry = "";
-            if (id == 0)
-            {
-                qry = "Insert into category Values(@Name)";
 
+            if (txtName.Text == "")
+            {
+                MessageBox.Show("Заполните поля");
             }
             else
             {
-                qry = "Update category Set catName = @Name where catID = @id ";
-            }
-            Hashtable ht = new Hashtable();
-            ht.Add("@id", id);
-            ht.Add ("@Name", txtName.Text);
+                string qry = "";
+                if (id == 0)
+                {
+                    qry = "Insert into category Values(@Name)";
 
-            if (MainClass.SQL(qry, ht) > 0)
-            {
-                MessageBox.Show("Saved successfully..");
-                id = 0;
-                txtName.Text = "";
-                txtName.Focus();
+                }
+                else
+                {
+                    qry = "Update category Set catName = @Name where catID = @id ";
+                }
+                Hashtable ht = new Hashtable();
+                ht.Add("@id", id);
+                ht.Add("@Name", txtName.Text);
+
+                if (MainClass.SQL(qry, ht) > 0)
+                {
+                    MessageBox.Show("Saved successfully..");
+                    id = 0;
+                    txtName.Text = "";
+                    txtName.Focus();
+                }
             }
+        }
+
+        private void frmCategoryAdd_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

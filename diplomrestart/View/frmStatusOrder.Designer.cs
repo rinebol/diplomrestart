@@ -41,9 +41,9 @@
             this.dgvid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvProvider = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSklad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvActive = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -91,12 +91,12 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(78, 513);
+            this.txtSearch.Location = new System.Drawing.Point(21, 513);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(740, 36);
+            this.txtSearch.Size = new System.Drawing.Size(868, 36);
             this.txtSearch.TabIndex = 9;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -105,7 +105,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(75, 497);
+            this.label1.Location = new System.Drawing.Point(18, 497);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 10;
@@ -134,9 +134,9 @@
             this.dgvid,
             this.dgvName,
             this.dgvProvider,
+            this.dgvSklad,
             this.dgvCount,
             this.dgvCost,
-            this.dgvActive,
             this.dgvDate});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -189,9 +189,9 @@
             this.dgvSno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgvSno.FillWeight = 70F;
             this.dgvSno.HeaderText = "Sr#";
-            this.dgvSno.MinimumWidth = 70;
+            this.dgvSno.MinimumWidth = 50;
             this.dgvSno.Name = "dgvSno";
-            this.dgvSno.Width = 70;
+            this.dgvSno.Width = 50;
             // 
             // dgvid
             // 
@@ -201,33 +201,44 @@
             // 
             // dgvName
             // 
+            this.dgvName.FillWeight = 12.10515F;
             this.dgvName.HeaderText = "Продукт";
             this.dgvName.Name = "dgvName";
+            this.dgvName.ReadOnly = true;
             // 
             // dgvProvider
             // 
+            this.dgvProvider.FillWeight = 12.10515F;
             this.dgvProvider.HeaderText = "Поставщик";
             this.dgvProvider.Name = "dgvProvider";
+            this.dgvProvider.ReadOnly = true;
+            // 
+            // dgvSklad
+            // 
+            this.dgvSklad.FillWeight = 12.10515F;
+            this.dgvSklad.HeaderText = "Склад ";
+            this.dgvSklad.Name = "dgvSklad";
             // 
             // dgvCount
             // 
+            this.dgvCount.FillWeight = 12.10515F;
             this.dgvCount.HeaderText = "Количество ";
             this.dgvCount.Name = "dgvCount";
+            this.dgvCount.ReadOnly = true;
             // 
             // dgvCost
             // 
+            this.dgvCost.FillWeight = 12.10515F;
             this.dgvCost.HeaderText = "Цена за 1 товар";
             this.dgvCost.Name = "dgvCost";
-            // 
-            // dgvActive
-            // 
-            this.dgvActive.HeaderText = "Состояние";
-            this.dgvActive.Name = "dgvActive";
+            this.dgvCost.ReadOnly = true;
             // 
             // dgvDate
             // 
+            this.dgvDate.FillWeight = 12.10515F;
             this.dgvDate.HeaderText = "Дата создания";
             this.dgvDate.Name = "dgvDate";
+            this.dgvDate.ReadOnly = true;
             // 
             // frmStatusOrder
             // 
@@ -261,9 +272,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvProvider;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSklad;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvActive;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvDate;
     }
 }

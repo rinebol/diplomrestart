@@ -1,5 +1,6 @@
 ﻿using diplomrestart.Model;
 using diplomrestart.View;
+using diplomrestart.View2;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -43,6 +44,7 @@ namespace diplomrestart
         private void frmMain_Load(object sender, EventArgs e)
         {
             lblUser.Text = MainClass.USER;
+           
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -52,17 +54,17 @@ namespace diplomrestart
 
         private void btnCategories_Click(object sender, EventArgs e)
         {
-            AddControls(new frmCategoryView());
+            AddControls(new frmCategoryView2());
         }
 
         private void btnProvider_Click(object sender, EventArgs e)
         {
-            AddControls(new frmProvider());
+            AddControls(new frmProvider2());
         }
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            AddControls(new frmProduct());
+            AddControls(new frmProduct2());
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -80,6 +82,31 @@ namespace diplomrestart
         private void btnOrder_Click(object sender, EventArgs e)
         {
             AddControls(new frmOrder2());
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            AddControls(new user());
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUser_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

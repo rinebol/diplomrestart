@@ -12,6 +12,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace diplomrestart.View
 {
@@ -107,9 +108,15 @@ namespace diplomrestart.View
             {
                 cdNameP.SelectedValue = cID;
             }
-         
 
-           
+            string qry4 = "Select CatID 'id' , catName 'name' from category";
+            MainClass.CBFill(qry4, cbSklad);
+
+            if (cID > 0)
+            {
+                cbSklad.SelectedValue = cID;
+            }
+
             //string sql = "SELECT*FROM Product";
             //cmd = new SqlCommand(sql, con);
             //con.Open();
@@ -136,42 +143,64 @@ namespace diplomrestart.View
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-
-            string qry = "";
-            if (id == 0)
+            if (cdNameP.Text == "" || cbProduct.Text == "" || cbSklad.Text == "" || txtCount.Text == "" )
             {
-                qry = "Insert into OrderP Values(@Name,@Provider,@Count,@Active,@Date,@Cost)";
-
+                MessageBox.Show("Заполните поля");
             }
             else
             {
-                qry = "Update OrderP Set oname = @Name, oprovider = @Provider,odate = @Date, ocost = @Cost, oactive = @Active, ocount = @Count where oid = @id ";
+
+                if(int.TryParse(txtCount.Text, out int number))
+                {
+                    {
+
+                    }
+                    string qry = "";
+                    if (id == 0)
+                    {
+                        qry = "Insert into OrderP Values(@Name,@Provider,@Count,@Date,@Cost,@Sklad)";
+
+                    }
+                    else
+                    {
+                        qry = "Update OrderP Set oname = @Name, oprovider = @Provider,odate = @Date, osklad = @Sklad, ocost = @Cost, ocount = @Count where oid = @id ";
+                    }
+                    Hashtable ht = new Hashtable();
+                    string active = "active";
+                    string date = DateTime.Now.ToString("dd.MM.yyyy, hh:mm");
+                    ht.Add("@id", id);
+                    //ht.Add("@Name", Convert.ToInt32(cdNameP.SelectedValue));
+                    ht.Add("@Name", cdNameP.Text);
+                    //ht.Add("@Provider", Convert.ToInt32(cbProduct.SelectedValue));
+                    ht.Add("@Provider", cbProduct.Text);
+                    ht.Add("@Sklad", cbSklad.Text);
+                    ht.Add("@Count", txtCount.Text);
+                    ht.Add("@Cost", cbCost.Text);
+                    ht.Add("@Date", date);
+
+
+
+
+
+                    if (MainClass.SQL(qry, ht) > 0)
+                    {
+                        MessageBox.Show("Saved successfully..");
+                        id = 0;
+
+                        txtCount.Text = "";
+                        cdNameP.SelectedIndex = -1;
+                        cbProduct.SelectedIndex = -1;
+                        cbCost.SelectedIndex = -1;
+                        cbSklad.SelectedIndex = -1;
+                        cdNameP.Focus();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Не верно заполнено поле: Количество");
+                }
+               
             }
-            Hashtable ht = new Hashtable();
-            string active = "active";
-            string date = DateTime.Now.ToString("MM/dd/yyyy"); 
-            ht.Add("@id", id);
-            //ht.Add("@Name", Convert.ToInt32(cdNameP.SelectedValue));
-            ht.Add("@Name", cdNameP.Text);
-            //ht.Add("@Provider", Convert.ToInt32(cbProduct.SelectedValue));
-            ht.Add("@Provider",cbProduct.Text);
-            ht.Add("@Count", txtCount.Text);
-            ht.Add("@Active", active);
-            ht.Add("@Date", date);
-            ht.Add("@Cost", cbCost.Text);
-
-
-
-
-            if (MainClass.SQL(qry, ht) > 0)
-            {
-                MessageBox.Show("Saved successfully..");
-                id = 0;
-                //txtName.Text = "";
-                //cbProvider.SelectedIndex = -1;
-                //txtName.Focus();
-            }
-
         }
         public void AddControls(Form f)
         {
@@ -205,6 +234,11 @@ namespace diplomrestart.View
 
             
 
+        }
+
+        private void cbSklad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
         }
     }
 }

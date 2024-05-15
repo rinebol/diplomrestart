@@ -21,30 +21,47 @@ namespace diplomrestart.Model
         public int cID = 0;
         public override void btnSave_Click(object sender, EventArgs e)
         {
-            string qry = "";
-            if (id == 0)
-            {
-                qry = "Insert into Product Values(@Name,@Provider,@Cost)";
 
+            if (txtName.Text == "" || txtCost.Text == "" || cbProvider.Text == "")
+            {
+                MessageBox.Show("Заполните поля");
             }
             else
             {
-                qry = "Update Product Set pname = @Name, pprovider = @Provider pcost = @Cost where pid = @id ";
-            }
-            Hashtable ht = new Hashtable();
-            ht.Add("@id", id);
-            ht.Add("@Name", txtName.Text);
-            ht.Add("@Provider", Convert.ToInt32(cbProvider.SelectedValue));
-            ht.Add("@Cost", txtCost.Text);
+                if (int.TryParse(txtCost.Text, out int number))
+                {
+                    string qry = "";
+                    if (id == 0)
+                    {
+                        qry = "Insert into Product Values(@Name,@Provider,@Cost)";
+
+                    }
+                    else
+                    {
+                        qry = "Update Product Set pname = @Name, pprovider = @Provider, pcost = @Cost where pid = @id ";
+                    }
+                    Hashtable ht = new Hashtable();
+                    ht.Add("@id", id);
+                    ht.Add("@Name", txtName.Text);
+                    ht.Add("@Provider", Convert.ToInt32(cbProvider.SelectedValue));
+                    ht.Add("@Cost", txtCost.Text);
 
 
-            if (MainClass.SQL(qry, ht) > 0)
-            {
-                MessageBox.Show("Saved successfully..");
-                id = 0;
-                txtName.Text = "";
-                cbProvider.SelectedIndex = -1;
-                txtName.Focus();
+                    if (MainClass.SQL(qry, ht) > 0)
+                    {
+                        MessageBox.Show("Saved successfully..");
+                        id = 0;
+                        txtName.Text = "";
+                        txtCost.Text = "";
+                        cbProvider.SelectedIndex = -1;
+                        txtName.Focus();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Не верно заполнено поле: Цена");
+                }
             }
         }
 

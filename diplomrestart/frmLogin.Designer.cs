@@ -35,12 +35,18 @@
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BorderRadius = 30;
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox2);
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.btnLogin);
             this.guna2Panel1.Controls.Add(this.btnExit);
@@ -102,6 +108,9 @@
             // 
             // txtUser
             // 
+            this.txtUser.BackColor = System.Drawing.Color.White;
+            this.txtUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtUser.BorderRadius = 5;
             this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUser.DefaultText = "";
             this.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -115,7 +124,7 @@
             this.txtUser.Location = new System.Drawing.Point(85, 139);
             this.txtUser.Name = "txtUser";
             this.txtUser.PasswordChar = '\0';
-            this.txtUser.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtUser.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtUser.PlaceholderText = "Имя пользователя";
             this.txtUser.SelectedText = "";
             this.txtUser.Size = new System.Drawing.Size(263, 46);
@@ -124,6 +133,9 @@
             // 
             // txtPass
             // 
+            this.txtPass.BackColor = System.Drawing.Color.White;
+            this.txtPass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPass.BorderRadius = 5;
             this.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPass.DefaultText = "";
             this.txtPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -137,6 +149,7 @@
             this.txtPass.Location = new System.Drawing.Point(85, 211);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '●';
+            this.txtPass.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtPass.PlaceholderText = "Пароль";
             this.txtPass.SelectedText = "";
             this.txtPass.Size = new System.Drawing.Size(263, 46);
@@ -152,6 +165,30 @@
             this.guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
             this.guna2MessageDialog1.Text = null;
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.White;
+            this.guna2PictureBox2.Image = global::diplomrestart.Properties.Resources.free_icon_avatar_6386976;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(42, 139);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(28, 46);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 23;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.White;
+            this.guna2PictureBox1.Image = global::diplomrestart.Properties.Resources.free_icon_padlock_2575570;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(42, 211);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(28, 46);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 22;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -166,6 +203,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -179,6 +218,8 @@
         private Guna.UI2.WinForms.Guna2Button btnExit;
         private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }
 

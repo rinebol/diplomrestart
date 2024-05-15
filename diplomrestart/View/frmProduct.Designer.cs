@@ -87,7 +87,7 @@
             this.guna2DataGridView1.Location = new System.Drawing.Point(42, 65);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(868, 407);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(893, 407);
             this.guna2DataGridView1.TabIndex = 7;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;

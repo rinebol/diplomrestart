@@ -207,9 +207,10 @@
             this.Name = "frmCategoryView";
             this.Text = "frmCategoryView";
             this.Load += new System.EventHandler(this.frmCategoryView_Load);
-            this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.guna2DataGridView1, 0);
             this.Controls.SetChildIndex(this.guna2DataGridView2, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).EndInit();
             this.ResumeLayout(false);

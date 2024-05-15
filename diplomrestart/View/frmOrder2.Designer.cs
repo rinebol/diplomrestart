@@ -40,6 +40,7 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.ViewPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbCost = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,7 +48,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.productTableAdapter = new diplomrestart.diplomDataSetTableAdapters.ProductTableAdapter();
-            this.cbCost = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbSklad = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.frmOrder2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.frmProductBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.frmProductBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -72,7 +74,7 @@
             this.cdNameP.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cdNameP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cdNameP.ItemHeight = 30;
-            this.cdNameP.Location = new System.Drawing.Point(21, 110);
+            this.cdNameP.Location = new System.Drawing.Point(21, 98);
             this.cdNameP.Name = "cdNameP";
             this.cdNameP.Size = new System.Drawing.Size(343, 36);
             this.cdNameP.TabIndex = 7;
@@ -100,7 +102,7 @@
             this.cbProduct.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbProduct.ItemHeight = 30;
-            this.cbProduct.Location = new System.Drawing.Point(21, 167);
+            this.cbProduct.Location = new System.Drawing.Point(21, 156);
             this.cbProduct.Name = "cbProduct";
             this.cbProduct.Size = new System.Drawing.Size(343, 36);
             this.cbProduct.TabIndex = 8;
@@ -118,12 +120,12 @@
             this.txtCount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCount.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCount.Location = new System.Drawing.Point(21, 225);
+            this.txtCount.Location = new System.Drawing.Point(20, 272);
             this.txtCount.Name = "txtCount";
             this.txtCount.PasswordChar = '\0';
             this.txtCount.PlaceholderText = "";
             this.txtCount.SelectedText = "";
-            this.txtCount.Size = new System.Drawing.Size(139, 25);
+            this.txtCount.Size = new System.Drawing.Size(139, 27);
             this.txtCount.TabIndex = 13;
             // 
             // btnCreate
@@ -136,7 +138,7 @@
             this.btnCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(105)))), ((int)(((byte)(188)))));
             this.btnCreate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(21, 282);
+            this.btnCreate.Location = new System.Drawing.Point(20, 314);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(343, 36);
             this.btnCreate.TabIndex = 14;
@@ -223,6 +225,8 @@
             this.guna2Panel2.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel2.BorderRadius = 30;
             this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.label6);
+            this.guna2Panel2.Controls.Add(this.cbSklad);
             this.guna2Panel2.Controls.Add(this.cbCost);
             this.guna2Panel2.Controls.Add(this.label5);
             this.guna2Panel2.Controls.Add(this.label4);
@@ -239,15 +243,31 @@
             this.guna2Panel2.Size = new System.Drawing.Size(385, 535);
             this.guna2Panel2.TabIndex = 21;
             // 
+            // cbCost
+            // 
+            this.cbCost.BackColor = System.Drawing.Color.Transparent;
+            this.cbCost.BorderColor = System.Drawing.Color.Gray;
+            this.cbCost.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbCost.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCost.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbCost.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbCost.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbCost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbCost.ItemHeight = 30;
+            this.cbCost.Location = new System.Drawing.Point(226, 214);
+            this.cbCost.Name = "cbCost";
+            this.cbCost.Size = new System.Drawing.Size(140, 36);
+            this.cbCost.TabIndex = 21;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(172, 206);
+            this.label5.Location = new System.Drawing.Point(223, 195);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 16);
+            this.label5.Size = new System.Drawing.Size(101, 16);
             this.label5.TabIndex = 20;
-            this.label5.Text = "Количество";
+            this.label5.Text = "Цена за товар";
             // 
             // label4
             // 
@@ -263,7 +283,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(18, 149);
+            this.label3.Location = new System.Drawing.Point(18, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 16);
             this.label3.TabIndex = 17;
@@ -273,7 +293,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(18, 206);
+            this.label2.Location = new System.Drawing.Point(18, 253);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 16);
             this.label2.TabIndex = 16;
@@ -283,7 +303,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(18, 91);
+            this.label1.Location = new System.Drawing.Point(18, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 16);
             this.label1.TabIndex = 15;
@@ -312,20 +332,32 @@
             // 
             this.productTableAdapter.ClearBeforeFill = true;
             // 
-            // cbCost
+            // cbSklad
             // 
-            this.cbCost.BackColor = System.Drawing.Color.Transparent;
-            this.cbCost.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbCost.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCost.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbCost.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbCost.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbCost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbCost.ItemHeight = 30;
-            this.cbCost.Location = new System.Drawing.Point(187, 225);
-            this.cbCost.Name = "cbCost";
-            this.cbCost.Size = new System.Drawing.Size(140, 36);
-            this.cbCost.TabIndex = 21;
+            this.cbSklad.BackColor = System.Drawing.Color.Transparent;
+            this.cbSklad.BorderColor = System.Drawing.Color.Gray;
+            this.cbSklad.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbSklad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSklad.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSklad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSklad.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbSklad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbSklad.ItemHeight = 30;
+            this.cbSklad.Location = new System.Drawing.Point(20, 214);
+            this.cbSklad.Name = "cbSklad";
+            this.cbSklad.Size = new System.Drawing.Size(200, 36);
+            this.cbSklad.TabIndex = 22;
+            this.cbSklad.SelectedIndexChanged += new System.EventHandler(this.cbSklad_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(18, 195);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 16);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Склад";
             // 
             // frmOrder2BindingSource
             // 
@@ -386,5 +418,7 @@
         private System.Windows.Forms.BindingSource productBindingSource;
         private diplomDataSetTableAdapters.ProductTableAdapter productTableAdapter;
         private Guna.UI2.WinForms.Guna2ComboBox cbCost;
+        private Guna.UI2.WinForms.Guna2ComboBox cbSklad;
+        private System.Windows.Forms.Label label6;
     }
 }
