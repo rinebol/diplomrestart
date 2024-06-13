@@ -35,7 +35,7 @@ namespace diplomrestart.Model
             }
             else
             {
-                if (int.TryParse(txtPhone.Text, out int number))
+                if (long.TryParse(txtPhone.Text, out long number))
                 {
                     string qry = "";
                     if (id == 0)
@@ -56,7 +56,7 @@ namespace diplomrestart.Model
 
                     if (MainClass.SQL(qry, ht) > 0)
                     {
-                        MessageBox.Show("Saved successfully..");
+                        MessageBox.Show("Сохранение выполнено успешно");
                         id = 0;
                         //txtName.Text = "";
                         //txtCost.Text = "";

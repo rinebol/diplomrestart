@@ -36,7 +36,7 @@ namespace diplomrestart
         {
             if(MainClass.IsValidUser(txtUser.Text, txtPass.Text) == false)
             {
-                guna2MessageDialog1.Show("Логин или пароль введен не верно");
+                MessageBox.Show("Логин или пароль введен не верно");
                 return;
             }
             else

@@ -45,7 +45,7 @@ namespace diplomrestart
             get { return user; }
             private set { user = value; }
         }
-        public static string phone;
+    
 
        
 

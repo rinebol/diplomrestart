@@ -1,4 +1,6 @@
-﻿using diplomrestart.OrderView;
+﻿using diplomrestart.Model;
+using diplomrestart.OrderView;
+using diplomrestart.View2;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections;
@@ -12,6 +14,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace diplomrestart.View
@@ -109,7 +112,7 @@ namespace diplomrestart.View
                 cdNameP.SelectedValue = cID;
             }
 
-            string qry4 = "Select CatID 'id' , catName 'name' from category";
+            string qry4 = "Select wid 'id' , wname 'name' from category";
             MainClass.CBFill(qry4, cbSklad);
 
             if (cID > 0)
@@ -149,13 +152,11 @@ namespace diplomrestart.View
             }
             else
             {
-
                 if(int.TryParse(txtCount.Text, out int number))
                 {
-                    {
-
-                    }
+                    
                     string qry = "";
+
                     if (id == 0)
                     {
                         qry = "Insert into OrderP Values(@Name,@Provider,@Count,@Date,@Cost,@Sklad)";
@@ -164,27 +165,23 @@ namespace diplomrestart.View
                     else
                     {
                         qry = "Update OrderP Set oname = @Name, oprovider = @Provider,odate = @Date, osklad = @Sklad, ocost = @Cost, ocount = @Count where oid = @id ";
+
                     }
                     Hashtable ht = new Hashtable();
-                    string active = "active";
                     string date = DateTime.Now.ToString("dd.MM.yyyy, hh:mm");
                     ht.Add("@id", id);
-                    //ht.Add("@Name", Convert.ToInt32(cdNameP.SelectedValue));
                     ht.Add("@Name", cdNameP.Text);
-                    //ht.Add("@Provider", Convert.ToInt32(cbProduct.SelectedValue));
                     ht.Add("@Provider", cbProduct.Text);
                     ht.Add("@Sklad", cbSklad.Text);
                     ht.Add("@Count", txtCount.Text);
                     ht.Add("@Cost", cbCost.Text);
                     ht.Add("@Date", date);
 
-
-
-
+                   
 
                     if (MainClass.SQL(qry, ht) > 0)
                     {
-                        MessageBox.Show("Saved successfully..");
+                        MessageBox.Show("Сохранение успешно выполнено");
                         id = 0;
 
                         txtCount.Text = "";
@@ -194,6 +191,7 @@ namespace diplomrestart.View
                         cbSklad.SelectedIndex = -1;
                         cdNameP.Focus();
                     }
+                 
                 }
                 else
                 {

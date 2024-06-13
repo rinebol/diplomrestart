@@ -23,10 +23,11 @@ namespace diplomrestart.OrderView
         }
         public void GetData()
         {
-            string qry = "Select * From category where catName like '%" + txtSearch.Text + "%' ";
+            string qry = "Select * From category where wname like '%" + txtSearch.Text + "%' ";
             ListBox lb = new ListBox();
             lb.Items.Add(dgvid);
             lb.Items.Add(dgvName);
+            lb.Items.Add(dgvAdress);
             MainClass.LoadData(qry, guna2DataGridView1, lb);
         }
 

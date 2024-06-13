@@ -16,6 +16,6 @@ Select oid, p.pname,c.tname,ocount,SUM(ocount*p.pcost)from OrderP o inner join P
 
 
 
-Select oid,oname,oprovider,ocount,odate,oactive from OrderP 
+Select oid,oname,oprovider,ocount,odate from OrderP 
 
 Select oid, oname, oprovider, ocount, odate, oactive,SUM(ocount*p.pcost) from OrderP o inner join Product p on p.pname = o.oprovider GROUP BY ocount,p.pcost,oid, p.pname,oprovider,oname,odate,oactive

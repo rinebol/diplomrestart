@@ -30,6 +30,7 @@ namespace diplomrestart.View2
             lb.Items.Add(dgvid);
             lb.Items.Add(dgvName);
             lb.Items.Add(dgvAdress);
+            lb.Items.Add(dgvPhone);
             MainClass.LoadData(qry, guna2DataGridView1, lb);
         }
 
@@ -55,6 +56,7 @@ namespace diplomrestart.View2
                 frm.id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
                 frm.txtName.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvName"].Value);
                 frm.txtAdress.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvAdress"].Value);
+                frm.txtPhone.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvPhone"].Value);
                 frm.ShowDialog();
                 GetData();
 
@@ -65,20 +67,28 @@ namespace diplomrestart.View2
             {
 
 
+                DialogResult dialogResult = MessageBox.Show("Вы хотите удалить данные", "Нет", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
+                                string qry = "Delete from provider where tid= " + id + "";
+                                Hashtable ht = new Hashtable();
+                                MainClass.SQL(qry, ht);
 
-                if (MessageBox.Show("Вы уверены что хотите удалить данные?") == DialogResult.Yes)
+
+
+                                MessageBox.Show("Удаление выполнено");
+                }
+                else if (dialogResult == DialogResult.No)
                 {
 
-                    int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
-                    string qry = "Delete from provider where tid= " + id + "";
-                    Hashtable ht = new Hashtable();
-                    MainClass.SQL(qry, ht);
-
-
-
-                    MessageBox.Show("Удаление выполнено");
-                    GetData();
                 }
+
+                GetData();
+
+              
+                 
+                
                 
             }
         }

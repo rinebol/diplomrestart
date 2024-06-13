@@ -40,6 +40,8 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.ViewPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbSklad = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbCost = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,8 +50,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.productTableAdapter = new diplomrestart.diplomDataSetTableAdapters.ProductTableAdapter();
-            this.cbSklad = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.frmOrder2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.frmProductBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.frmProductBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -180,7 +180,7 @@
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(118, 35);
             this.guna2Button2.TabIndex = 17;
-            this.guna2Button2.Text = "Категории";
+            this.guna2Button2.Text = "Склад";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button3
@@ -242,6 +242,33 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(385, 535);
             this.guna2Panel2.TabIndex = 21;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(18, 195);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 16);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Склад";
+            // 
+            // cbSklad
+            // 
+            this.cbSklad.BackColor = System.Drawing.Color.Transparent;
+            this.cbSklad.BorderColor = System.Drawing.Color.Gray;
+            this.cbSklad.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbSklad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSklad.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSklad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSklad.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbSklad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbSklad.ItemHeight = 30;
+            this.cbSklad.Location = new System.Drawing.Point(20, 214);
+            this.cbSklad.Name = "cbSklad";
+            this.cbSklad.Size = new System.Drawing.Size(200, 36);
+            this.cbSklad.TabIndex = 22;
+            this.cbSklad.SelectedIndexChanged += new System.EventHandler(this.cbSklad_SelectedIndexChanged);
             // 
             // cbCost
             // 
@@ -332,33 +359,6 @@
             // 
             this.productTableAdapter.ClearBeforeFill = true;
             // 
-            // cbSklad
-            // 
-            this.cbSklad.BackColor = System.Drawing.Color.Transparent;
-            this.cbSklad.BorderColor = System.Drawing.Color.Gray;
-            this.cbSklad.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbSklad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSklad.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbSklad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbSklad.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbSklad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbSklad.ItemHeight = 30;
-            this.cbSklad.Location = new System.Drawing.Point(20, 214);
-            this.cbSklad.Name = "cbSklad";
-            this.cbSklad.Size = new System.Drawing.Size(200, 36);
-            this.cbSklad.TabIndex = 22;
-            this.cbSklad.SelectedIndexChanged += new System.EventHandler(this.cbSklad_SelectedIndexChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(18, 195);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 16);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Склад";
-            // 
             // frmOrder2BindingSource
             // 
             this.frmOrder2BindingSource.DataSource = typeof(diplomrestart.View.frmOrder2);
@@ -397,8 +397,6 @@
         #endregion
 
         public Guna.UI2.WinForms.Guna2ComboBox cdNameP;
-        private Guna.UI2.WinForms.Guna2ComboBox cbProduct;
-        private Guna.UI2.WinForms.Guna2TextBox txtCount;
         private Guna.UI2.WinForms.Guna2Button btnCreate;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
@@ -417,8 +415,10 @@
         private diplomDataSet diplomDataSet;
         private System.Windows.Forms.BindingSource productBindingSource;
         private diplomDataSetTableAdapters.ProductTableAdapter productTableAdapter;
-        private Guna.UI2.WinForms.Guna2ComboBox cbCost;
-        private Guna.UI2.WinForms.Guna2ComboBox cbSklad;
         private System.Windows.Forms.Label label6;
+        public Guna.UI2.WinForms.Guna2ComboBox cbProduct;
+        public Guna.UI2.WinForms.Guna2ComboBox cbCost;
+        public Guna.UI2.WinForms.Guna2ComboBox cbSklad;
+        public Guna.UI2.WinForms.Guna2TextBox txtCount;
     }
 }

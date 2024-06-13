@@ -20,17 +20,7 @@ namespace diplomrestart
             Application.Run(new frmLogin());
             Application.Run(new frmMain());
 
-            string appPath = "C:\\Users\\stepa\\source\\repos\\diplomrestart\\diplomrestart.sln";
-
-            // Создаем объект ярлыка
-            using (Process shortcut = new Process())
-            {
-                // Задаем параметры для ярлыка
-                shortcut.StartInfo.FileName = appPath;
-
-                // Запускаем приложение через ярлык
-                shortcut.Start();
-            }
+           
         }
 
     }

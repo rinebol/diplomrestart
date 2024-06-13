@@ -31,34 +31,38 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lab = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvSno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvProvider = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSklad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSklad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvdel = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ok = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
+            // lab
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(16, -4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 40);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Категории";
+            this.lab.AutoSize = true;
+            this.lab.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lab.ForeColor = System.Drawing.Color.White;
+            this.lab.Location = new System.Drawing.Point(16, -4);
+            this.lab.Name = "lab";
+            this.lab.Size = new System.Drawing.Size(90, 40);
+            this.lab.TabIndex = 6;
+            this.lab.Text = "Заказ";
             // 
             // guna2Panel1
             // 
@@ -114,6 +118,7 @@
             // guna2DataGridView1
             // 
             this.guna2DataGridView1.AllowUserToAddRows = false;
+            this.guna2DataGridView1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -134,10 +139,12 @@
             this.dgvid,
             this.dgvName,
             this.dgvProvider,
-            this.dgvSklad,
             this.dgvCount,
+            this.dgvSklad,
             this.dgvCost,
-            this.dgvDate});
+            this.dgvDate,
+            this.dgvdel,
+            this.ok});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -149,6 +156,7 @@
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(21, 16);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
+            this.guna2DataGridView1.ReadOnly = true;
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.Size = new System.Drawing.Size(868, 469);
             this.guna2DataGridView1.TabIndex = 8;
@@ -165,7 +173,7 @@
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 30;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
+            this.guna2DataGridView1.ThemeStyle.ReadOnly = true;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -184,61 +192,118 @@
             this.guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
             this.guna2MessageDialog1.Text = null;
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn1.FillWeight = 63.2118F;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::diplomrestart.Properties.Resources.trash_12683363;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 50;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn1.Width = 50;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn2.FillWeight = 50F;
+            this.dataGridViewImageColumn2.HeaderText = "Заказ пришел";
+            this.dataGridViewImageColumn2.Image = global::diplomrestart.Properties.Resources.check_mark_5290644;
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn2.MinimumWidth = 50;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn2.Width = 372;
+            // 
             // dgvSno
             // 
             this.dgvSno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgvSno.FillWeight = 70F;
-            this.dgvSno.HeaderText = "Sr#";
+            this.dgvSno.HeaderText = "#";
             this.dgvSno.MinimumWidth = 50;
             this.dgvSno.Name = "dgvSno";
+            this.dgvSno.ReadOnly = true;
             this.dgvSno.Width = 50;
             // 
             // dgvid
             // 
             this.dgvid.HeaderText = "id";
             this.dgvid.Name = "dgvid";
+            this.dgvid.ReadOnly = true;
             this.dgvid.Visible = false;
             // 
             // dgvName
             // 
-            this.dgvName.FillWeight = 12.10515F;
+            this.dgvName.FillWeight = 15.90595F;
             this.dgvName.HeaderText = "Продукт";
             this.dgvName.Name = "dgvName";
             this.dgvName.ReadOnly = true;
             // 
             // dgvProvider
             // 
-            this.dgvProvider.FillWeight = 12.10515F;
+            this.dgvProvider.FillWeight = 15.90595F;
             this.dgvProvider.HeaderText = "Поставщик";
             this.dgvProvider.Name = "dgvProvider";
             this.dgvProvider.ReadOnly = true;
             // 
-            // dgvSklad
-            // 
-            this.dgvSklad.FillWeight = 12.10515F;
-            this.dgvSklad.HeaderText = "Склад ";
-            this.dgvSklad.Name = "dgvSklad";
-            // 
             // dgvCount
             // 
-            this.dgvCount.FillWeight = 12.10515F;
+            this.dgvCount.FillWeight = 15.90595F;
             this.dgvCount.HeaderText = "Количество ";
             this.dgvCount.Name = "dgvCount";
             this.dgvCount.ReadOnly = true;
             // 
+            // dgvSklad
+            // 
+            this.dgvSklad.FillWeight = 15.90595F;
+            this.dgvSklad.HeaderText = "Дата создания";
+            this.dgvSklad.Name = "dgvSklad";
+            this.dgvSklad.ReadOnly = true;
+            // 
             // dgvCost
             // 
-            this.dgvCost.FillWeight = 12.10515F;
+            this.dgvCost.FillWeight = 15.90595F;
             this.dgvCost.HeaderText = "Цена за 1 товар";
             this.dgvCost.Name = "dgvCost";
             this.dgvCost.ReadOnly = true;
             // 
             // dgvDate
             // 
-            this.dgvDate.FillWeight = 12.10515F;
-            this.dgvDate.HeaderText = "Дата создания";
+            this.dgvDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvDate.FillWeight = 70F;
+            this.dgvDate.HeaderText = "Склад";
+            this.dgvDate.MinimumWidth = 70;
             this.dgvDate.Name = "dgvDate";
             this.dgvDate.ReadOnly = true;
+            // 
+            // dgvdel
+            // 
+            this.dgvdel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvdel.FillWeight = 63.2118F;
+            this.dgvdel.HeaderText = "";
+            this.dgvdel.Image = global::diplomrestart.Properties.Resources.trash_12683363;
+            this.dgvdel.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dgvdel.MinimumWidth = 50;
+            this.dgvdel.Name = "dgvdel";
+            this.dgvdel.ReadOnly = true;
+            this.dgvdel.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvdel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgvdel.Width = 50;
+            // 
+            // ok
+            // 
+            this.ok.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ok.FillWeight = 50F;
+            this.ok.HeaderText = "";
+            this.ok.Image = global::diplomrestart.Properties.Resources.check_mark_5290644;
+            this.ok.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ok.MinimumWidth = 50;
+            this.ok.Name = "ok";
+            this.ok.ReadOnly = true;
+            this.ok.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ok.Width = 50;
             // 
             // frmStatusOrder
             // 
@@ -246,7 +311,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(105)))), ((int)(((byte)(188)))));
             this.ClientSize = new System.Drawing.Size(976, 634);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lab);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmStatusOrder";
@@ -262,19 +327,23 @@
 
         #endregion
 
-        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label lab;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         public Guna.UI2.WinForms.Guna2TextBox txtSearch;
         public System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSno;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvProvider;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSklad;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSklad;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvDate;
+        private System.Windows.Forms.DataGridViewImageColumn dgvdel;
+        private System.Windows.Forms.DataGridViewImageColumn ok;
     }
 }

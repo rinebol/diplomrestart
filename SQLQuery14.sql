@@ -3,7 +3,8 @@
 pid int primary key identity,
 pname varchar(50),
 pprovider varchar(50),
-pcost money
+pcost money,
+post int
 )
 
 Drop table Product

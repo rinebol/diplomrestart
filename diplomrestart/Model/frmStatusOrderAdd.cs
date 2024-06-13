@@ -32,18 +32,26 @@ namespace diplomrestart.Model
                 qry = "Update OrderP Set  oactive = @Active  where oid = @id ";
             }
             Hashtable ht = new Hashtable();
-            string active = cbActive.Text;
+            //string active = cbActive.Text;
             string date = DateTime.Now.ToString("DD/MM/yyyy");
-            ht.Add("@id", id);
+            //ht.Add("@id", id);
             //ht.Add("@Name", d);
             //ht.Add("@Name", this);
             ////ht.Add("@Provider", Convert.ToInt32(cbProduct.SelectedValue));
             //ht.Add("@Provider", this);
             //ht.Add("@Count", this);
-            ht.Add("@Active", active);
+            //ht.Add("@Active", active);
             //ht.Add("@Date", this);
             //ht.Add("@Cost", this);
-
+            ht.Add("@id", id);
+            //ht.Add("@Name", Convert.ToInt32(cdNameP.SelectedValue));
+            ht.Add("@Name", cdNameP.Text);
+            //ht.Add("@Provider", Convert.ToInt32(cbProduct.SelectedValue));
+            ht.Add("@Provider", cbProduct.Text);
+            ht.Add("@Sklad", cbSklad.Text);
+            ht.Add("@Count", txtCount.Text);
+            ht.Add("@Cost", cbCost.Text);
+            ht.Add("@Date", date);
 
 
 
@@ -65,8 +73,8 @@ namespace diplomrestart.Model
 
         private void frmStatusOrderAdd_Load(object sender, EventArgs e)
         {
-            string active = cbActive.Text;
-            txtC.Text = cbActive.Text;
+            //string active = cbActive.Text;
+            //cbProduct.Text = cbActive.Text;
         }
     }
 }

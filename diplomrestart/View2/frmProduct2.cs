@@ -1,4 +1,5 @@
 ﻿using diplomrestart.Model;
+using diplomrestart.View;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections;
@@ -7,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,16 +24,18 @@ namespace diplomrestart.View2
 
         private void frmProvider2_Load(object sender, EventArgs e)
         {
+
             GetData();
         }
         public void GetData()
         {
-            string qry = "select pid,pname,c.tname ,pcost from Product p inner join provider c on c.tid = p.pprovider where pname like '%" + txtSearch.Text + "%' ";
+            string qry = "select pid,pname,c.tname ,pcost,post from Product p inner join provider c on c.tid = p.pprovider where pname like '%" + txtSearch.Text + "%' ";
             ListBox lb = new ListBox();
             lb.Items.Add(dgvid);
             lb.Items.Add(dgvName);
             lb.Items.Add(dgvProvider);
             lb.Items.Add(dgvCost);
+            lb.Items.Add(dgvost);
             MainClass.LoadData(qry, guna2DataGridView1, lb);
         }
 
@@ -45,6 +49,7 @@ namespace diplomrestart.View2
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             GetData();
+          
         }
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -56,8 +61,10 @@ namespace diplomrestart.View2
                 frmProductAdd frm = new frmProductAdd();
                 frm.id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
                 frm.txtName.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvName"].Value);
-                frm.cbProvider.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvProvider"].Value);
+                //frm.cbProvider.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvProvider"].Value);
+                //frm.cbProvider.SelectedIndex = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvProvider"].Value);
                 frm.txtCost.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvCost"].Value);
+                frm.txtost.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvost"].Value);
                 frm.ShowDialog();
                 GetData();
 
@@ -66,17 +73,26 @@ namespace diplomrestart.View2
 
             if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "dgvdel")
             {
+
+
+
+
+
+                DialogResult dialogResult = MessageBox.Show("Вы хотите удалить данные", "Нет", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                       
+                        int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
+                        string qry = "Delete from Product where pid= " + id + "";
+                        Hashtable ht = new Hashtable();
+                        MainClass.SQL(qry, ht);
+                        MessageBox.Show("Удаление выполнено");
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        
+                    }
              
-                
-
-                    int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
-                    string qry = "Delete from Product where pid= " + id + "";
-                    Hashtable ht = new Hashtable();
-                    MainClass.SQL(qry, ht);
-
-
-
-                    MessageBox.Show("Удаление выполнено");
                     GetData();
                 
             }

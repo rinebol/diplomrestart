@@ -26,12 +26,13 @@ namespace diplomrestart.OrderView
         }
         public void GetData()
         {
-            string qry = "select pid,pname,c.tname ,pcost from Product p inner join provider c on c.tid = p.pprovider where pname like '%" + txtSearch.Text + "%' ";
+            string qry = "select pid,pname,c.tname ,pcost,post from Product p inner join provider c on c.tid = p.pprovider where pname like '%" + txtSearch.Text + "%' ";
             ListBox lb = new ListBox();
             lb.Items.Add(dgvid);
             lb.Items.Add(dgvName);
             lb.Items.Add(dgvProvider);
             lb.Items.Add(dgvCost);
+            lb.Items.Add(dgvost);
             MainClass.LoadData(qry, guna2DataGridView1, lb);
         }
   

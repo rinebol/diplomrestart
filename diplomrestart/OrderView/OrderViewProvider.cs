@@ -28,6 +28,7 @@ namespace diplomrestart.OrderView
             lb.Items.Add(dgvid);
             lb.Items.Add(dgvName);
             lb.Items.Add(dgvAdress);
+            lb.Items.Add(dgvPhone);
             MainClass.LoadData(qry, guna2DataGridView1, lb);
         }
 

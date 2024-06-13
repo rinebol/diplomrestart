@@ -26,11 +26,14 @@ namespace diplomrestart.View
         }
         public void GetData()
         {
-            string qry = "Select * From provider where tname like '%" + txtSearch.Text + "%' ";
+            string qry = "Select dgvid,dgvName,dgvPhone,dgvAdress from provider where tname like '%" + txtSearch.Text + "%' ";
             ListBox lb = new ListBox();
             lb.Items.Add(dgvid);
+            lb.Items.Add(dgvPhone);
             lb.Items.Add(dgvName);
             lb.Items.Add(dgvAdress);
+           
+
             MainClass.LoadData(qry, guna2DataGridView1, lb);
         }
         public override void btnAdd_Click(object sender, EventArgs e)
@@ -57,6 +60,7 @@ namespace diplomrestart.View
                 frm.id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
                 frm.txtName.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvName"].Value);
                 frm.txtAdress.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvAdress"].Value);
+                frm.txtAdress.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvPhone"].Value);
                 frm.ShowDialog();
                 GetData();
 

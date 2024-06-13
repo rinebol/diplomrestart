@@ -67,18 +67,26 @@ namespace diplomrestart.Model
 
             if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "dgvdel")
             {
-             
-               
-                
 
+
+
+                DialogResult dialogResult = MessageBox.Show("Вы хотите удалить данные", "Нет", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
                     int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
                     string qry = "Delete from users where UserID= " + id + "";
                     Hashtable ht = new Hashtable();
                     MainClass.SQL(qry, ht);
 
 
-                 
+
                     MessageBox.Show("Удаление выполнено");
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+
+                }
+                
                     GetData();
                 
             }
